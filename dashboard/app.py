@@ -3,6 +3,7 @@ import requests
 import pandas as pd
 import plotly.express as px
 import json
+import os
 
 from pathlib import Path
 
@@ -35,7 +36,7 @@ METRICS_FILE = (
 # API
 # ============================================================
 
-API_URL = "http://127.0.0.1:8000"
+API_URL = os.getenv("API_URL", "http://127.0.0.1:8000")
 
 
 # ============================================================
